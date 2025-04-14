@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration - CréaWeb Academy</title>
+    <title>Inscription - CréaWeb Academy</title>
     <link rel="stylesheet" href="styles/inscription.css">
 </head>
 <body>
@@ -23,15 +23,15 @@
 
 <header>
     <div class="logo">
-        <img src="images/logo.png" alt="CréaWeb Academy Logo">
+        <img src="images/logo.png" alt="Logo de CréaWeb Academy">
     </div>
     <nav>
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="detail.html">Courses</a></li>
-            <li><a href="history.html">About</a></li>
-            <li><a href="page_d'information.html">Explore</a></li>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="detail.html">Cours</a></li>
+            <li><a href="history.html">À propos</a></li>
+            <li><a href="page_d'information.html">Explorer</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
@@ -41,93 +41,88 @@
     <form id="captureForm">
         <div class="row">
             <div class="field">
-            <label for="prenom">First Name</label>
-            <input type="text" id="prenom" name="prenom" required>
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" name="prenom" required>
+            </div>
+            <div class="field">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
         </div>
-        <div class="field">
-            <label for="nom">Last Name</label>
-            <input type="text" id="nom" name="nom" required>
-        </div>
-    </div>
 
-    
-    <div class="row">
-        <div class="field">
-            <label for="pays">Country</label>
-            <input type="text" id="pays" name="pays" required>
+        <div class="row">
+            <div class="field">
+                <label for="pays">Pays</label>
+                <input type="text" id="pays" name="pays" required>
+            </div>
+            <div class="field">
+                <label for="ville">Ville</label>
+                <input type="text" id="ville" name="ville" required>
+            </div>
         </div>
-        <div class="field">
-            <label for="ville">City</label>
-            <input type="text" id="ville" name="ville" required>
+        
+        <div class="row">
+            <div class="field">
+                <label for="code_postal">Code Postal</label>
+                <input type="text" id="code_postal" name="code_postal" required>
+            </div>
+            <div class="field">
+                <label for="telephone">Numéro de Téléphone</label>
+                <input type="tel" id="telephone" name="telephone" required>
+            </div>
         </div>
-    </div>
-    
-    <div class="row">
-        <div class="field">
-            <label for="code_postal">Postal Code</label>
-            <input type="text" id="code_postal" name="code_postal" required>
+        
+        <div class="row">
+            <div class="field">
+                <label for="email">Adresse Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
         </div>
-        <div class="field">
-            <label for="telephone">Phone Number</label>
-            <input type="tel" id="telephone" name="telephone" required>
-        </div>
-    </div>
-    
-    <div class="row">
-        <div class="field">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required>
-            
-        </div>
-    </div>
-    
 
-            <h2>Select Your Courses:</h2>
-            <p>Please click one of the buttons below to display the corresponding courses. Choose "Beginner" if you're just starting out, or "Advanced" if you already have some basics.</p>
+        <h2>Sélectionnez vos cours :</h2>
+        <p>Veuillez cliquer sur l'un des boutons ci-dessous pour afficher les cours correspondants. Choisissez "Débutant" si vous commencez, ou "Avancé" si vous avez déjà des bases.</p>
+
+        <div class="cours-list">
+            <button type="button" id="select-debutant">Afficher les cours Débutants</button>
+            <button type="button" id="select-avance">Afficher les cours Avancés</button>
             
-            <div class="cours-list">
-                <button type="button" id="select-debutant">Show Beginner Courses</button>
-                <button type="button" id="select-avance">Show Advanced Courses</button>
-                
-                <div id="cours-debutant" style="display: none;">
-                    <label><input type="checkbox" name="cours" value="html-css-debutant" class="debutant"> HTML & CSS (Beginner)</label>
-                    <label><input type="checkbox" name="cours" value="javascript-debutant" class="debutant"> JavaScript (Beginner)</label>
-                    <label><input type="checkbox" name="cours" value="python-debutant" class="debutant"> Python (Beginner)</label>
-                    <label><input type="checkbox" name="cours" value="mysql-debutant" class="debutant"> MySQL (Beginner)</label>
-                </div>
-                
-                <div id="cours-avance" style="display: none;">
-                    <label><input type="checkbox" name="cours" value="html-css-avance" class="avance"> HTML & CSS (Advanced)</label>
-                    <label><input type="checkbox" name="cours" value="javascript-avance" class="avance"> JavaScript (Advanced)</label>
-                    <label><input type="checkbox" name="cours" value="python-avance" class="avance"> Python (Advanced)</label>
-                    <label><input type="checkbox" name="cours" value="mysql-avance" class="avance"> MySQL (Advanced)</label>
-                </div>
-                
-                <label><input type="checkbox" name="cours" value="marketing-digital"> Digital Marketing</label>
-                
+            <div id="cours-debutant" style="display: none;">
+                <label><input type="checkbox" name="cours" value="html-css-debutant" class="debutant"> HTML & CSS (Débutant)</label>
+                <label><input type="checkbox" name="cours" value="javascript-debutant" class="debutant"> JavaScript (Débutant)</label>
+                <label><input type="checkbox" name="cours" value="python-debutant" class="debutant"> Python (Débutant)</label>
+                <label><input type="checkbox" name="cours" value="mysql-debutant" class="debutant"> MySQL (Débutant)</label>
+            </div>
+            
+            <div id="cours-avance" style="display: none;">
+                <label><input type="checkbox" name="cours" value="html-css-avance" class="avance"> HTML & CSS (Avancé)</label>
+                <label><input type="checkbox" name="cours" value="javascript-avance" class="avance"> JavaScript (Avancé)</label>
+                <label><input type="checkbox" name="cours" value="python-avance" class="avance"> Python (Avancé)</label>
+                <label><input type="checkbox" name="cours" value="mysql-avance" class="avance"> MySQL (Avancé)</label>
             </div>
 
-            <script>
-                document.getElementById("select-debutant").addEventListener("click", function() {
-                    let debutantDiv = document.getElementById("cours-debutant");
-                    let checkboxes = debutantDiv.querySelectorAll("input[type='checkbox']");
-                    debutantDiv.style.display = (debutantDiv.style.display === "none" || debutantDiv.style.display === "") ? "block" : "none";
-                    checkboxes.forEach(checkbox => checkbox.checked = true);
-                });
+            <label><input type="checkbox" name="cours" value="marketing-digital"> Marketing Digital</label>
+        </div>
 
-                document.getElementById("select-avance").addEventListener("click", function() {
-                    let avanceDiv = document.getElementById("cours-avance");
-                    let checkboxes = avanceDiv.querySelectorAll("input[type='checkbox']");
-                    avanceDiv.style.display = (avanceDiv.style.display === "none" || avanceDiv.style.display === "") ? "block" : "none";
-                    checkboxes.forEach(checkbox => checkbox.checked = true);
-                });
-            </script>
+        <script>
+            document.getElementById("select-debutant").addEventListener("click", function() {
+                let debutantDiv = document.getElementById("cours-debutant");
+                let checkboxes = debutantDiv.querySelectorAll("input[type='checkbox']");
+                debutantDiv.style.display = (debutantDiv.style.display === "none" || debutantDiv.style.display === "") ? "block" : "none";
+                checkboxes.forEach(checkbox => checkbox.checked = true);
+            });
 
-<button type="submit" style="background-color: red; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
-    Register
-  </button>
-</form>
-    </section>
+            document.getElementById("select-avance").addEventListener("click", function() {
+                let avanceDiv = document.getElementById("cours-avance");
+                let checkboxes = avanceDiv.querySelectorAll("input[type='checkbox']");
+                avanceDiv.style.display = (avanceDiv.style.display === "none" || avanceDiv.style.display === "") ? "block" : "none";
+                checkboxes.forEach(checkbox => checkbox.checked = true);
+            });
+        </script>
+
+        <button type="submit" style="background-color: red; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
+            S'inscrire
+        </button>
+    </form>
 
     <!-- Firebase v9+ -->
     <script type="module">
@@ -159,7 +154,7 @@
                 let email = document.getElementById("email").value.trim();
 
                 if (!nom || !prenom || !pays || !ville || !code_postal || !telephone || !email) {
-                    alert("Please fill out all the fields!");
+                    alert("Veuillez remplir tous les champs !");
                     return;
                 }
 
@@ -180,10 +175,10 @@
                         cours,
                         timestamp: serverTimestamp()
                     });
-                    console.log("Data saved!");
+                    console.log("Données enregistrées !");
                     window.location.href = "merci.html";
                 } catch (error) {
-                    console.error("Save error:", error);
+                    console.error("Erreur d'enregistrement :", error);
                 }
             });
         });
@@ -191,7 +186,7 @@
 </main>
 
 <footer>
-    <p>&copy; 2025 CréaWeb Academy - All rights reserved</p>
+    <p>&copy; 2025 CréaWeb Academy - Tous droits réservés</p>
 </footer>
 </body>
 </html>

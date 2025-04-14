@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thank You - CréaWeb Academy</title>
+  <title>Merci - CréaWeb Academy</title>
   <link rel="stylesheet" href="styles/inscri.css" />
   <link rel="icon" href="images/favicon.png" type="image/x-icon" />
   <style>
@@ -26,7 +26,6 @@
       height: 50px;
     }
 
-    /* Burger button */
     .menu-toggle {
       font-size: 28px;
       background: none;
@@ -35,11 +34,10 @@
       z-index: 1001;
     }
 
-    /* Navigation (mobile version) */
     nav {
       position: fixed;
       top: 0;
-      left: -250px; /* Hide initially */
+      left: -250px;
       height: 100%;
       width: 250px;
       background-color: #333;
@@ -75,7 +73,6 @@
       width: 100%;
     }
 
-    /* Desktop mode */
     @media(min-width: 768px) {
       .menu-toggle {
         display: none;
@@ -111,15 +108,15 @@
 
   <header>
     <div class="logo">
-      <img src="images/logo.png" alt="CréaWeb Academy Logo" />
+      <img src="images/logo.png" alt="Logo de CréaWeb Academy" />
     </div>
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <nav id="mobileNav">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="detail.html">Courses</a></li>
-        <li><a href="detail.html">Explore</a></li>
-        <li><a href="history.html">OurStory</a></li>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="detail.html">Cours</a></li>
+        <li><a href="detail.html">Explorer</a></li>
+        <li><a href="history.html">NotreHistoire</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -127,16 +124,16 @@
 
   <main class="thank-you-container">
     <section class="thank-you">
-      <h1>Thank you for registering!</h1>
-      <p>Your registration at <strong>CréaWeb Academy</strong> has been successfully received.</p>
-      <p>We will send you an email with all the necessary information within 6 hours.</p>
-      <p>In the meantime, feel free to explore our courses and discover our content.</p>
-      <a href="formations.html" class="cta-button">View Courses</a>
+      <h1>Merci pour votre inscription !</h1>
+      <p>Votre inscription à <strong>CréaWeb Academy</strong> a bien été enregistrée.</p>
+      <p>Nous vous enverrons un e-mail contenant toutes les informations nécessaires dans un délai de 6 heures.</p>
+      <p>En attendant, n'hésitez pas à explorer nos cours et découvrir notre contenu.</p>
+      <a href="formations.html" class="cta-button">Voir les cours</a>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 CréaWeb Academy - All rights reserved</p>
+    <p>&copy; 2025 CréaWeb Academy - Tous droits réservés</p>
   </footer>
 
   <script>

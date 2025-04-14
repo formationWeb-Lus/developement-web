@@ -28,7 +28,7 @@ async function chargerModules() {
   
         div.innerHTML = `
           <figure>
-    <img src="${module.image}" alt="${module.title}" loading="lazy">
+    <img src="${module.image}" alt="${module.titte}" loading="lazy">
     <figcaption>${module.figcaptionDescription}</figcaption>
   </figure>
   <h3>${module.title}</h3>
